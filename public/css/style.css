@@ -8,6 +8,16 @@ header{
 
 }
 
+footer{
+	background-color: #FFE59E;
+	height: 500px;
+}
+
+.tt{
+	height: 200px;
+	margin-top: 50px;
+}
+
 .bordure{
 	height: 50px;
 	width : 100%;
@@ -19,6 +29,12 @@ header{
 	font-size: 1em; 
 	top: 150px; 
 }
+
+footer img {
+	width: 60px; 
+	height: 60px; 
+	object-fit: cover; 
+	}
 
 #nomdusite{
 	position: relative;
@@ -34,11 +50,15 @@ header{
 }
 #icone{
 	position: relative;
-	top: 160px; left: 250px;
+	top: 160px; left: 300px;
 } 
 
 a:link {color: white;}
 a:visited {color: white;}
 a:hover {color: white;}
 a:active {color: white;}
+
+footer a:link,footer a:visited,footer a:hover,footer a:active{
+	color: black;
+}
 

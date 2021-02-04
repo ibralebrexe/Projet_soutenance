@@ -47,7 +47,7 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
         </div>    
     </div>
     <div class="justify-content-center" id="nomdusite">
-        DAKAR LOCOS
+        POCOS LOCOS
     </div>
     <div class="row justify-content-center">
         <div class="col-md-2 bordure">
@@ -65,4 +65,43 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
     </div>
 </div>
 </header>
+{% endblock %} 
+
+{% block footer %}
+<footer>
+    <div class="row justify-content-around">
+        <div class="col-md-3 tt">
+            <p class="text-center">Retrouver nous aussi sur : </p>
+            <div class="row justify-content-around">
+                <div class="col-md-2">
+                    <a href="https://www.instagram.com/?hl=fr"><img src="https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png"/></a>
+                </div>
+                <div class="col-md-2">
+                    <a href="https://www.facebook.com"><img src="https://img.icons8.com/wired/64/000000/facebook-circled.png"/></a>
+                </div>
+                <div class="col-md-2">
+                    <a href="https://www.twitter.com"><img src="https://img.icons8.com/android/48/000000/twitter.png"/></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 tt">
+            <div class="row justify-content-center">
+                ASSISTANCE
+            </div>
+            <div class="row justify-content-center">
+                <a href="{{ path('aide') }}" >Centre d'aide</a>
+            </div>
+            <div class="row justify-content-center">
+                <a href="{{ path('sav') }}" >SAV</a>
+            </div>
+            <div class="row justify-content-center">
+                <a href="{{ path('faq') }}" >Foire aux questions</a>
+            </div>
+
+        </div>
+        <div class="col-md-3 tt">
+
+        </div>
+    </div>
+</footer>
 {% endblock %}

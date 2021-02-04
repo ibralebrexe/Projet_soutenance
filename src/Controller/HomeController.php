@@ -13,7 +13,7 @@ class HomeController extends AbstractController
    */
   public function home()
   {
-    return $this->render('header.html.twig');
+    return $this->render('home.html.twig');
   }
 
    /**
@@ -32,4 +32,27 @@ class HomeController extends AbstractController
     return $this->render('login.html.twig');
   }
 
+   /**
+   * @Route("/aide", name="aide")
+   */
+  public function aide()
+  {
+    return $this->render('aide.html.twig');
+  }
+
+   /**
+   * @Route("/sav", name="sav")
+   */
+  public function sav()
+  {
+    return $this->render('sav.html.twig');
+  }
+   /**
+   * @Route("/faq", name="faq")
+   */
+
+  public function faq()
+  {
+    return $this->render('faq.html.twig');
+  }
 }
