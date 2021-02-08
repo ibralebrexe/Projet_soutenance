@@ -1,6 +1,6 @@
 header{
 	background-image: url("../images/header.jpg");
-	height: 500px;
+	height: 327px;
 	background-attachment: scroll;
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -10,24 +10,20 @@ header{
 
 footer{
 	background-color: #FFE59E;
-	height: 500px;
+	height: 172px;
 }
 
 .tt{
-	height: 200px;
-	margin-top: 50px;
+	height: 115px;
+	margin-top: 25px;
 }
 
 .bordure{
-	height: 50px;
-	width : 100%;
-	padding: 150px 0px; 
+	padding-top: 65px ; 
 	font-weight: bold;
 	text-align: center;
 	opacity: 0.9;
-	position: relative;
 	font-size: 1em; 
-	top: 150px; 
 }
 
 footer img {
@@ -37,20 +33,24 @@ footer img {
 	}
 
 #nomdusite{
-	position: relative;
 	top: 200px;
-	height: 50px;
 	display: flex;
 	font-weight: bold;
 	color: white;
 	text-align: center;
-	position:relative;
 	font-size: 3em; 
-
+	padding-top: 25px;
+	font-family: 'Raleway', sans-serif;
 }
+
+body{
+	font-family: "Roboto Slab", serif;
+}
+
 #icone{
-	position: relative;
-	top: 160px; left: 300px;
+	width: 50%;
+	margin: 0 auto;
+	padding-top: 5%;
 } 
 
 a:link {color: white;}
@@ -60,5 +60,38 @@ a:active {color: white;}
 
 footer a:link,footer a:visited,footer a:hover,footer a:active{
 	color: black;
+}
+
+.trait
+{
+background-color: black;
+height: 1px;
+width: 75%;
+margin: 0 auto;
+}
+
+.copyright{
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 934px) and (min-width: 769px){
+footer{
+	height: 200px;
+}
+
+
+.trait{
+    margin-top: 34px;
+}
+}
+
+@media screen and (min-width: 200px) and (max-width: 769px) {
+#icone{
+	display: flex;
+	flex-wrap: nowrap;
+	margin: 0 18px;
+
+}
+
 }
 

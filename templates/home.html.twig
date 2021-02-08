@@ -6,7 +6,7 @@
 <header>
 <div class="container">
 
-    <div id="icone" class="row">
+    <div id="icone" class="row justify-content-between">
         <div class="col-md-1">
             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                 width="50" height="50"
@@ -92,16 +92,32 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
                 <a href="{{ path('aide') }}" >Centre d'aide</a>
             </div>
             <div class="row justify-content-center">
-                <a href="{{ path('sav') }}" >SAV</a>
+                <a href="{{ path('sav') }}" >Plan du site</a>
             </div>
             <div class="row justify-content-center">
                 <a href="{{ path('faq') }}" >Foire aux questions</a>
             </div>
-
         </div>
         <div class="col-md-3 tt">
-
+            <div class="row justify-content-center">
+                <form>
+                    <label for="email" class="form-label">Inscrivez-vous a la Newsletter :</label>
+                    <div class="row">
+                        <div class="col-mb-1">
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="col-mb-1">
+                            <button type="submit" class="btn btn-dark">OK</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
+    <div class="trait"></div>
+    <div class="copyright mt-1 text-center">
+        © 2021 POCOS LOCOS, Inc. All rights reserved · 
+        <a href="{{ path('aide') }}" >Confidentialité et cookies</a>
+        <a href="{{ path('aide') }}" >· Conditions d'utilisation </a> 
     </div>
 </footer>
 {% endblock %}
