@@ -2,13 +2,17 @@
 
 namespace App\Controller;
 
+
 use App\Form\ContactType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request as HttpFoundationRequest;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ContactController extends AbstractController
 {
+
     /**
      * @Route("/contact", name="contact")
      */
@@ -48,4 +52,14 @@ class ContactController extends AbstractController
             'contactForm' => $form->createView()
         ]);
     }
+
+   /**
+   * @Route("/contact", name="contact")
+   */
+  public function contact()
+  {
+    return $this->render('contact.html.twig');
+  }
+  
+
 }

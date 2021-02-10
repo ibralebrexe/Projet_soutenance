@@ -1,0 +1,100 @@
+header{
+	background-image: url("../images/header.jpg");
+	height: 327px;
+	background-attachment: scroll;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position-y: 79%;
+
+}
+
+footer{
+	background-color: #FFE59E;
+	height: 172px;
+}
+
+.tt{
+	height: 115px;
+	margin-top: 25px;
+}
+
+.bordure{
+	padding-top: 65px ; 
+	font-weight: bold;
+	text-align: center;
+	opacity: 0.9;
+	font-size: 1em; 
+}
+
+footer img {
+	width: 60px; 
+	height: 60px; 
+	object-fit: cover; 
+	}
+
+#nomdusite{
+	top: 200px;
+	display: flex;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	font-size: 3em; 
+	padding-top: 25px;
+	font-family: 'Raleway', sans-serif;
+}
+
+body{
+	font-family: "Roboto Slab", serif;
+}
+
+#icone{
+	width: 50%;
+	margin: 0 auto;
+	padding-top: 5%;
+} 
+
+a:link {color: white;}
+a:visited {color: white;}
+a:hover {color: white;}
+a:active {color: white;}
+
+footer a:link,footer a:visited,footer a:hover,footer a:active{
+	color: black;
+}
+
+.trait
+{
+background-color: black;
+height: 1px;
+width: 75%;
+margin: 0 auto;
+}
+
+.copyright{
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 934px) and (min-width: 769px){
+footer{
+	height: 200px;
+}
+
+
+.trait{
+    margin-top: 34px;
+}
+}
+
+@media screen and (min-width: 200px) and (max-width: 769px) {
+#icone{
+	display: flex;
+	flex-wrap: nowrap;
+	margin: 0 18px;
+
+}
+
+}
+
+.audd {
+	margin: 15px 34px;
+}
