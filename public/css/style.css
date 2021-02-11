@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap');
+
+
+
+/* ========== HEADER ========== */
+
+
 header{
 	background-image: url("../images/header.jpg");
 	height: 327px;
@@ -5,12 +12,9 @@ header{
 	background-size: 100%;
 	background-repeat: no-repeat;
 	background-position-y: 79%;
+	font-family: "Roboto Slab", serif;
 
-}
 
-footer{
-	background-color: #FFE59E;
-	height: 172px;
 }
 
 .tt{
@@ -26,12 +30,6 @@ footer{
 	font-size: 1em; 
 }
 
-footer img {
-	width: 60px; 
-	height: 60px; 
-	object-fit: cover; 
-	}
-
 #nomdusite{
 	top: 200px;
 	display: flex;
@@ -43,9 +41,154 @@ footer img {
 	font-family: 'Raleway', sans-serif;
 }
 
+a:link {color: white;}
+a:visited {color: white;}
+a:hover {color: white;}
+a:active {color: white;}
+
+/* =========== MAIN - ACCUEIL =========== */
+
 body{
-	font-family: "Roboto Slab", serif;
+	font-family: Montserrat, sans-serif;
+
 }
+
+/* =========== MAIN - CONTACT ==========*/
+#container_main {
+	display: flex;
+	align-items: center;
+}
+
+#container_main #container_infos {
+	width: 50%;
+}
+
+#container_main #container_infos p, h1, h3, h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+	margin: 20px;
+	text-align: center;	
+}
+
+h1, h3, h4 {
+	font-weight: bolder;
+
+}
+
+h3, h4{
+	font-size: 1em;
+}
+
+.needToMove {
+	margin-top: 40px;
+}
+
+#container_main #container_infos p {
+    font-size: 18px;
+    line-height: 35px;
+}
+
+#container_main #container_infos h1 {
+    font-size: 35px;
+}
+
+#container_main #container_form {
+	background-image: url('../images/fond.jpg');
+}
+
+#container_main #container_form #contact h4 {
+	font-size: 12px;
+	color: #777;
+	margin-top : 15px;
+}
+
+#container_main #container_form {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+#contact {
+	background:#F9F9F9;
+	padding: 25px;
+    margin: 50px 0;
+    border-radius: 15px;
+}
+
+#contact h3 {
+	color: #e8505b;
+	display: block;
+	font-size: 30px;	
+}
+
+#contact h4 {
+	margin: 5px 0 15px;
+	font-size: 1rem;
+}
+
+fieldset {
+	margin: 0 0 10px;
+	min-width: 100%;
+	width: 100%;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+	width: 100%;
+	border: 1px solid #CCC;
+	background: #FFF;
+	margin: 0 0 15px;
+	padding: 10px;
+}
+
+
+#contact textarea {
+	height: 200px;
+    max-width: 100%; 
+    resize: none;  
+}
+
+#contact button[type="submit"] {
+	cursor: pointer;
+	width: 100%;
+    border: none;
+    border-radius: 20px;
+	background: #e8505b;
+	color: #FFF;
+	margin: 0 0 5px;
+	padding: 10px;
+	font-size: 15px;
+}
+
+#contact button[type="submit"]:hover {
+	background: rgb(177, 34, 34);
+}
+
+#contact button[type="submit"]:active { box-shadow:inset 0 3px 3px rgba(0, 0, 0, 0.5); }
+
+#contact input:focus, #contact textarea:focus {
+	outline: 0;
+	border: 1px solid #999;
+}
+
+::-webkit-input-placeholder {
+ color: #888;
+}
+
+:-moz-placeholder {
+ color: #888;
+}
+
+::-moz-placeholder {
+ color: #888;
+}
+
+:-ms-input-placeholder {
+ color: #888;
+} 
+
+/* ========== FOOTER ========== */
 
 #icone{
 	width: 50%;
@@ -53,10 +196,20 @@ body{
 	padding-top: 5%;
 } 
 
-a:link {color: white;}
-a:visited {color: white;}
-a:hover {color: white;}
-a:active {color: white;}
+
+
+footer{
+	background-color: #FFE59E;
+	height: 172px;
+	font-family: "Roboto Slab", serif;
+
+}
+
+footer img {
+	width: 60px; 
+	height: 60px; 
+	object-fit: cover; 
+	}
 
 footer a:link,footer a:visited,footer a:hover,footer a:active{
 	color: black;
@@ -74,27 +227,30 @@ margin: 0 auto;
 	margin: 0 auto;
 }
 
-@media screen and (max-width: 934px) and (min-width: 769px){
-footer{
-	height: 200px;
-}
 
+/* =============== RESPONSIVE ============== */
 
-.trait{
-    margin-top: 34px;
-}
-}
+/* =============== HEADER ============= */
 
 @media screen and (min-width: 200px) and (max-width: 769px) {
-#icone{
-	display: flex;
-	flex-wrap: nowrap;
-	margin: 0 18px;
+	#icone{
+		display: flex;
+		flex-wrap: nowrap;
+		margin: 0 18px;
+	
+	}
+	
+	}
 
-}
+/* ================ FOOTER ================== */
 
-}
-
-.audd {
-	margin: 15px 34px;
-}
+@media screen and (max-width: 934px) and (min-width: 769px){
+	footer{
+		height: 200px;
+	}
+	
+	
+	.trait{
+		margin-top: 34px;
+	}
+	}

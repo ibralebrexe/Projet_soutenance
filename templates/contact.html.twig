@@ -18,10 +18,10 @@
 
         <div id="container_form">
 
-            {{ form_start(contactForm, {'attr': {'id': 'contact'}} ) }}
+            {{ form_start(contactF, {'attr': {'id': 'contact'}} ) }}
 
                 <div class="my-custom-class-for-errors">
-                    {{ form_errors(contactForm) }}
+                    {{ form_errors(contactF) }}
                 </div>
 
                 {% for message in app.flashes('message') %}
@@ -33,25 +33,23 @@
                 <h3>Formulaire de contact</h3>
                 <h4>Un problème ? Une question ? N'hésitez pas à nous contacter !</h4>
                     
-                <div class="row">
-                    <div class="col">
-                        {{ form_widget(contactForm.name, {'attr': {'placeholder': 'Nom & prénom'}}) }}
+                    <div >
+                        {{ form_widget(contactF.name, {'attr': {'placeholder': 'Nom & prénom'}}) }}
                     </div>
 
-                    <div class="col">
-                        {{ form_widget(contactForm.email, {'attr': {'placeholder': 'Adresse e-mail'}}) }}
+                    <div >
+                        {{ form_widget(contactF.email, {'attr': {'placeholder': 'Adresse e-mail'}}) }}
                     </div>
 
-                    <div class="col">
-                        {{ form_widget(contactForm.subject, {'attr': {'placeholder': 'Objet'}}) }}
+                    <div >
+                        {{ form_widget(contactF.subject, {'attr': {'placeholder': 'Objet'}}) }}
                     </div>
 
-                    <div class="col">
-                        {{ form_widget(contactForm.message, {'attr': {'placeholder': 'Entrez votre message ici...'}}) }}
+                    <div >
+                        {{ form_widget(contactF.message, {'attr': {'placeholder': 'Entrez votre message ici...'}}) }}
                     </div>
-                </div>
 
-            {{ form_end(contactForm) }}
+            {{ form_end(contactF) }}
 
         </div>
 

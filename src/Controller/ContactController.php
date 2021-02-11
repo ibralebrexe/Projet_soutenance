@@ -19,6 +19,7 @@ class ContactController extends AbstractController
     {
         $form = $this->createForm(ContactType::class);
         $form->handleRequest($request);
+        $test = "blabla";
 
         if($form->isSubmitted() && $form->isValid()){
             $contact = $form->getData();
@@ -48,17 +49,8 @@ class ContactController extends AbstractController
         }
 
         return $this->render('contact.html.twig', [
-            "contactForm" => $form->createView()
+            "contactF" => $form->createView() 
         ]);
-    }
-
-   /**
-   * @Route("/contact", name="contact")
-   */
-  public function contact()
-  {
-    return $this->render('contact.html.twig');
-  }
-  
+    }  
 
 }
