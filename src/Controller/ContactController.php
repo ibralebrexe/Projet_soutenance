@@ -7,7 +7,6 @@ use App\Form\ContactType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request as HttpFoundationRequest;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ContactController extends AbstractController
@@ -48,8 +47,8 @@ class ContactController extends AbstractController
             return $this->redirectToRoute('contact');
         }
 
-        return $this->render('contact/index.html.twig', [
-            'contactForm' => $form->createView()
+        return $this->render('contact.html.twig', [
+            "contactForm" => $form->createView()
         ]);
     }
 
