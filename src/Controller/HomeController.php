@@ -2,18 +2,33 @@
 
 namespace App\Controller;
 
+use App\Entity\Activity;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Entity\Location;
+use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\ORM\Mapping\Id;
+use Symfony\Component\HttpFoundation\Request;
+
+
+
 
 class HomeController extends AbstractController
 {
     /**
-   * @Route("/accueil", name="home")
+   * @Route("/", name="home")
    */
   public function home()
   {
-    return $this->render('home.html.twig');
+
+    $activités = $this->getDoctrine()->getRepository(Activity::class)->findAll();
+    $locations = $this->getDoctrine()->getRepository(Location::class)->findAll();
+
+    return $this->render('home.html.twig', [
+      "locations" => $locations,
+      "activités" => $activités
+    ]);
   }
 
    /**

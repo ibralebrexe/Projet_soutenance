@@ -34,19 +34,19 @@
                 <h4>Un problème ? Une question ? N'hésitez pas à nous contacter !</h4>
                     
                     <div >
-                        {{ form_widget(contactF.name, {'attr': {'placeholder': 'Nom & prénom'}}) }}
+                        {{ form_widget(contactF.name, {'attr': {'placeholder': 'Nom & prénom', 'class': 'name'}}) }}
                     </div>
 
                     <div >
-                        {{ form_widget(contactF.email, {'attr': {'placeholder': 'Adresse e-mail'}}) }}
+                        {{ form_widget(contactF.email, {'attr': {'placeholder': 'Adresse e-mail', 'class': 'email'}}) }}
                     </div>
 
                     <div >
-                        {{ form_widget(contactF.subject, {'attr': {'placeholder': 'Objet'}}) }}
+                        {{ form_widget(contactF.subject, {'attr': {'placeholder': 'Objet', 'class': 'objet'}}) }}
                     </div>
 
                     <div >
-                        {{ form_widget(contactF.message, {'attr': {'placeholder': 'Entrez votre message ici...'}}) }}
+                        {{ form_widget(contactF.message, {'attr': {'placeholder': 'Entrez votre message ici...', 'class': 'message'}}) }}
                     </div>
 
             {{ form_end(contactF) }}

@@ -7,26 +7,26 @@
             <form class="d-flex mt-3 mb-3  ">
                 <div class="col-md-3">
                     <select class="custom-select form-control ml-5 mr-5">
-                        <option selected>Pays</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                      <option selected>Pays</option>
+                      {% for location in locations %} 
+                      <option value="{{ location.id }}">{{ location.pays }}</option>
+                      {% endfor %}
                     </select>
                 </div>
                 <div class="col-md-3">
                     <select class="custom-select form-control ml-5 mr-5">
                         <option selected>Ville</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        {% for location in locations %} 
+                        <option value="{{ location.id }}">{{ location.ville }}</option>
+                        {% endfor %}
                     </select>   
                 </div>
                 <div class="col-md-3">
                     <select class="custom-select form-control ml-5 mr-5">
                         <option selected>Activité</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        {% for activité in activités %} 
+                        <option value="{{ activité.id }}">{{ activité.nom }}</option>
+                        {% endfor %}
                     </select>
                 </div>
                 <div class="col md-2">
