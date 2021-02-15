@@ -6,11 +6,12 @@ use App\Entity\Activity;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
-use App\Entity\Location;
+use App\Entity\Ville;
+use App\Entity\Pays;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Mapping\Id;
 use Symfony\Component\HttpFoundation\Request;
-
+use App\Form\SearchType;
 
 
 
@@ -22,12 +23,16 @@ class HomeController extends AbstractController
   public function home()
   {
 
+    $form = $this->createForm(SearchType::class);
     $activités = $this->getDoctrine()->getRepository(Activity::class)->findAll();
-    $locations = $this->getDoctrine()->getRepository(Location::class)->findAll();
+    $villes = $this->getDoctrine()->getRepository(Ville::class)->findAll();
+    $pays = $this->getDoctrine()->getRepository(Pays::class)->MyFindAll();
 
     return $this->render('home.html.twig', [
-      "locations" => $locations,
-      "activités" => $activités
+      "villes" => $villes,
+      "activités" => $activités,
+      "pays" => $pays,
+      "search_form" => $form->createView() 
     ]);
   }
 
@@ -55,6 +60,14 @@ class HomeController extends AbstractController
     return $this->render('aide.html.twig');
   }
 
+  /**
+   * @Route("/cookie", name="cookie")
+   */
+  public function cookie()
+  {
+    return $this->render('cookie.html.twig');
+  }
+
    /**
    * @Route("/sav", name="sav")
    */
@@ -69,5 +82,23 @@ class HomeController extends AbstractController
   public function faq()
   {
     return $this->render('faq.html.twig');
+  }
+
+  /**
+   * @Route("/mention", name="mention")
+   */
+
+  public function mention()
+  {
+    return $this->render('mention.html.twig');
+  }
+
+  /**
+   * @Route("/politique", name="politique")
+   */
+
+  public function politique()
+  {
+    return $this->render('politique.html.twig');
   }
 }

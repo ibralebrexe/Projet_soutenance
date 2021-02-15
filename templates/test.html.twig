@@ -5,12 +5,11 @@
     <nav class="navbar navbar-light bg-light ">
         <div class="row container-fluid justify-content-center ">
             <form class="d-flex mt-3 mb-3  ">
-              {{ form(search_form) }}
                 <div class="col-md-3">
                     <select class="custom-select form-control ml-5 mr-5">
                       <option selected>Pays</option>
                       {% for pay in pays %} 
-                      <option value="{{ pay.id }}">{{ pay.pays }}</a></option>
+                      <option value="{{ pay.id }}"><a href="{{ path('pays', {paysid: pay.id }) }}"></a>{{ pay.pays }}</a></option>
                       {% endfor %}
                     </select>
                 </div>
@@ -18,7 +17,7 @@
                     <select class="custom-select form-control ml-5 mr-5">
                         <option selected><a href="?categorie=2"></a>Ville</option>
                         {% for ville in villes %} 
-                        <option value="{{ ville.id }}">{{ ville.ville }}</option>
+                        <option value="{{ ville.id }}"><a href="{{ path('ville', {villeid: ville.id }) }}">{{ ville.ville }}</a></option>
                         {% endfor %}
                     </select>   
                 </div>
@@ -26,7 +25,7 @@
                     <select class="custom-select form-control ml-5 mr-5">
                         <option selected>Activité</option>
                         {% for activité in activités %} 
-                        <option value="{{ activité.id }}">{{ activité.nom }}</option>
+                        <option value="{{ activité.id }}"><a href="{{ path('activite', {activiteid: activité.id }) }}"></a>{{ activité.nom }}</option>
                         {% endfor %}
                     </select>
                 </div>

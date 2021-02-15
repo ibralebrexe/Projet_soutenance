@@ -20,7 +20,7 @@ class ActivityRepository extends ServiceEntityRepository
     }
 
     // /**
-    //  * @return Activity[] Returns an array of Activity objects
+    //  * @return Activity[] Returns an array of Activite objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class ActivityRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?Activity
+    public function findOneBySomeField($value): ?Activite
     {
         return $this->createQueryBuilder('a')
             ->andWhere('a.exampleField = :val')
