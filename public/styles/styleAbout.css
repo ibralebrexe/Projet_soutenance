@@ -67,3 +67,68 @@
     margin-right: 10px;
     margin-top: 15px;
 }
+
+
+
+/* =================== RESPONSIVE ABOUT PAGE ================= */
+
+
+@media screen and (max-width: 800px) {
+   
+    #container_main #aboutUs #Us, #website {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    #container_main #aboutUs .photo img {
+        height: 450px;
+        width: 100%;
+    }
+
+    #container_main #aboutUs p {
+        font-size: 15px;
+    }
+    
+}
+
+@media screen and (max-width: 984px) {
+   
+    #container_main #aboutUs #Us, #website {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    #container_main #aboutUs .photo img {
+        height: 400px;
+        width: 100%;
+    }
+
+    #container_main #aboutUs p {
+        font-size: 15px;
+    }
+    
+    #container_main #aboutUs #Us #infosUs h2 {
+        margin-top: 150px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+   
+    #container_main #aboutUs #Us, #website {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    #container_main #aboutUs .photo img {
+        height: 600px;
+        width: 100%;
+    }
+
+    #container_main #aboutUs p {
+        font-size: 15px;
+    }
+ 
+}
