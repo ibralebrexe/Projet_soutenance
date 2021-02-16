@@ -4,10 +4,10 @@
 <main>
     <div class="card mt-4">
         <div class="card-body">
-            <h3 class="card-title">{{ activités.nom }}</h3>
-            <p class="card-text">{{ activités.description }}</p>
-            <p class="card-text">{{ activités.type }}</p>
-            <a href="{{ path('home', {id: activités.id}) }}" class="btn btn-success">Modifier</a>
+            <h3 class="card-title">{{ activites.nom }}</h3>
+            <p class="card-text">{{ activites.description }}</p>
+            <p class="card-text">{{ activites.type }}</p>
+            <a href="{{ path('edit-activity', {id: activites.id}) }}" class="btn btn-success">Modifier</a>
             </div>
         </div>
     </div>

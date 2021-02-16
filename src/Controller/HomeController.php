@@ -22,10 +22,10 @@ class HomeController extends AbstractController
   public function home()
   {
 
-    $activités = $this->getDoctrine()->getRepository(Activity::class)->findAll();
+    $activites = $this->getDoctrine()->getRepository(Activity::class)->findAll();
 
     return $this->render('home.html.twig', [
-      "activités" => $activités,
+      "activites" => $activites,
     ]);
   }
 
@@ -34,17 +34,17 @@ class HomeController extends AbstractController
    */
   public function show($id): Response
   {
-    $activités = $this->getDoctrine()->getRepository(Activity::class)->find($id);
+    $activites = $this->getDoctrine()->getRepository(Activity::class)->find($id);
     $villes = $this->getDoctrine()->getRepository(Ville::class)->find($id);
     $pays = $this->getDoctrine()->getRepository(Pays::class)->find($id);
 
     
-    if (!$activités) {
+    if (!$activites) {
       throw new Exception("Erreur : Il n'y a aucune activité avec l'id : $id");
     }
 
     return $this->render('detail.html.twig', [
-      'activités' => $activités,
+      'activites' => $activites,
       'villes' => $villes,
       'pays' => $pays
     ]);

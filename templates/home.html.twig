@@ -3,15 +3,14 @@
 {% block content %}
 <main>
   <div class="row">
-    {% for activité in activités %}
+    {% for activite in activites %}
         <div class="col-lg-4 col-md-6 mb-2">
           <div class="card h-100">
             <div class="card-body">
               <h5 class="card-title text-center ">
-              <a id="lien" href="{{ path('activite_show', {id: activité.id }) }}">{{ activité.nom }}</a>
+              <a id="lien" href="{{ path('activite_show', {id: activite.id }) }}">{{ activite.nom }}</a>
               </h5>
-              <p class="card-text">{{ activité.description }}</p>
-              <p class="card-text">Catégorie: {{ activité.type }}</p>
+              <p class="card-text">{{ activite.type }}</p>
             </div>
           </div>
         </div>  

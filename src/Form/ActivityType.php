@@ -23,7 +23,7 @@ class ActivityType extends AbstractType
             ->add('description', TextareaType::class)
             ->add('adresse', TextType::class)
             ->add('codePostal', TextType::class)
-            ->add('localisation', TextType::class);
+            ->add('localisation');
     }
 
     public function configureOptions(OptionsResolver $resolver)
