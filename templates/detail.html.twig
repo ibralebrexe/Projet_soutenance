@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+<main>
+    <div class="card mt-4">
+        <div class="card-body">
+            <h3 class="card-title">{{ activités.nom }}</h3>
+            <p class="card-text">{{ activités.description }}</p>
+            <p class="card-text">{{ activités.type }}</p>
+            <a href="{{ path('home', {id: activités.id}) }}" class="btn btn-success">Modifier</a>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

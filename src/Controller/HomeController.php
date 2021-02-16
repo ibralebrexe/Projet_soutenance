@@ -11,7 +11,6 @@ use App\Entity\Pays;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Mapping\Id;
 use Symfony\Component\HttpFoundation\Request;
-use App\Form\SearchType;
 
 
 
@@ -23,16 +22,31 @@ class HomeController extends AbstractController
   public function home()
   {
 
-    $form = $this->createForm(SearchType::class);
     $activités = $this->getDoctrine()->getRepository(Activity::class)->findAll();
-    $villes = $this->getDoctrine()->getRepository(Ville::class)->findAll();
-    $pays = $this->getDoctrine()->getRepository(Pays::class)->MyFindAll();
 
     return $this->render('home.html.twig', [
-      "villes" => $villes,
       "activités" => $activités,
-      "pays" => $pays,
-      "search_form" => $form->createView() 
+    ]);
+  }
+
+  /**
+   * @Route("/show/{id}", name="activite_show")
+   */
+  public function show($id): Response
+  {
+    $activités = $this->getDoctrine()->getRepository(Activity::class)->find($id);
+    $villes = $this->getDoctrine()->getRepository(Ville::class)->find($id);
+    $pays = $this->getDoctrine()->getRepository(Pays::class)->find($id);
+
+    
+    if (!$activités) {
+      throw new Exception("Erreur : Il n'y a aucune activité avec l'id : $id");
+    }
+
+    return $this->render('detail.html.twig', [
+      'activités' => $activités,
+      'villes' => $villes,
+      'pays' => $pays
     ]);
   }
 
