@@ -47,7 +47,7 @@ class ActivityController extends AbstractController
         ->add('description', TextareaType::class)
         ->add('adresse', TextType::class)
         ->add('codePostal', TextType::class)
-        ->add('localisation', TextType::class)
+        ->add('localisation')
         ->getForm();
 
         $form->handleRequest($request);
@@ -58,7 +58,7 @@ class ActivityController extends AbstractController
             $entityManager->flush();
 
             $this->addFlash('activity_edit_success', 'Activité ajoutée avec succès');
-            return $this->redirectToRoute('home');
+            return $this->redirectToRoute('add-activity');
         }
 
         return $this->render('/add_activity/editActivity.html.twig', [
