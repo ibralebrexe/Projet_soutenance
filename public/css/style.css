@@ -41,16 +41,29 @@ header{
 	font-family: 'Raleway', sans-serif;
 }
 
-a:link {color: white;}
-a:visited {color: white;}
-a:hover {color: white;}
-a:active {color: white;}
+header a:link {color: white;}
+header a:visited {color: white;}
+header a:hover {color: white;}
+header a:active {color: white;}
+
+a:link {color: black;}
+a:visited {color: black;}
+a:hover {color: black;}
+a:active {color: black;}
 
 /* =========== MAIN - ACCUEIL =========== */
 
 body{
 	font-family: Montserrat, sans-serif;
 
+}
+a:link {color: black;}
+a:visited {color: black;}
+a:hover {color: black;}
+a:active {color: black;}
+
+h5{
+	font-weight: bold;
 }
 
 /* =========== MAIN - CONTACT ==========*/
